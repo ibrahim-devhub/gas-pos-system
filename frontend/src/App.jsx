@@ -3,6 +3,7 @@ import AppLayout from './components/AppLayout.jsx';
 import BusinessRequiredRoute from './components/BusinessRequiredRoute.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import AuthCallback from './pages/AuthCallback.jsx';
 import Landing from './pages/Landing.jsx';
 import Login from './pages/Login.jsx';
 import PosSales from './pages/PosSales.jsx';
@@ -17,6 +18,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/auth/callback" element={<AuthCallback />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/setup" element={<SetupBusiness />} />
         <Route element={<BusinessRequiredRoute />}>
